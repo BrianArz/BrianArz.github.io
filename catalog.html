@@ -1,0 +1,507 @@
+<!-------------------------------------
+  Template Name: Subas Ecommerce Responsive Bootstrap Template
+  Description: This is html5 template
+  Author: SubasTeam
+  Version: 1.0
+  Design and Developed by: SubasTeam
+
+  License ID: 30326e75- ... ... -a27e1fe2632c
+
+  License holder: https://wrapbootstrap.com/user/SirVide
+  Date: April 23, 2023
+
+  Item: Subas - Bootstrap eCommerce Template
+  Item#: WB0473B2L
+---------------------------------------->
+
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <!-- Metadata -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESA</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- CSS Files -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="vendors/css/bootstrap.min.css" />
+
+    <!-- Nivo -->
+    <link rel="stylesheet" href="vendors/css/nivo-slider.css" />
+
+    <!-- Plugins -->
+    <link rel="stylesheet" href="css/core.css" />
+
+    <!-- Shortcodes -->
+    <link rel="stylesheet" href="css/shortcode/shortcodes.css" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+
+    <!-- Vendors -->
+    <link rel="stylesheet" href="vendors/css/animate.css/animate.min.css" />
+    <!-- <link rel="stylesheet" href="vendors/css/aos.css"> -->
+    <link rel="stylesheet" href="vendors/css/boxicons/css/boxicons.min.css" />
+
+    <!-- Modernizer JS -->
+    <!-- <script src="vendors/js/modernizr-3.11.2.min.js"></script> -->
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+      <div class="container d-flex align-items-center justify-content-between">
+        <h1 class="logo"><a href="index.html">ESA</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li>
+              <a class="nav-link scrollto active" href="#hero">Inicio</a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="index.html#about">Acerca De</a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="index.html#products">Productos</a>
+            </li>
+            <li>
+              <a class="nav-link scrollto" href="index.html#testimonials">Testimonios</a>
+            </li>
+            <li><a class="nav-link scrollto" href="index.html#team">Equipo</a></li>
+            <li>
+              <a class="nav-link scrollto" href="#page-content">Catálogo</a>
+            </li>
+            <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a href="#">Drop Down 1</a></li>
+                <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                  <ul>
+                    <li><a href="#">Deep Drop Down 1</a></li>
+                    <li><a href="#">Deep Drop Down 2</a></li>
+                    <li><a href="#">Deep Drop Down 3</a></li>
+                    <li><a href="#">Deep Drop Down 4</a></li>
+                    <li><a href="#">Deep Drop Down 5</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Drop Down 2</a></li>
+                <li><a href="#">Drop Down 3</a></li>
+                <li><a href="#">Drop Down 4</a></li>
+              </ul>
+            </li> -->
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+      <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
+        <h1>Bienvenido a nuestra tienda</h1>
+        <h2>Conoce nuestra variedad de productos</h2>
+        <div class="d-flex">
+          <a href="#page-content" class="btn-get-started scrollto">Comenzar</a>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <main>
+      <div id="page-content" class="page-wrapper mt-5">
+        <div class="shop-section mb-80">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-9 order-lg-2 order-1">
+                <div class="shop-content">
+                  <div class="shop-option box-shadow mb-30 clearfix" style="background-color: #fff;">
+                    <ul class="nav shop-tab f-left" role="tablist">
+                      <li>
+                        <a class="active" href="#grid-view" data-bs-toggle="tab"
+                          ><i class="zmdi zmdi-view-module"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a href="#list-view" data-bs-toggle="tab"
+                          ><i class="zmdi zmdi-view-list-alt"></i
+                        ></a>
+                      </li>
+                    </ul>
+                    <div class="short-by f-left text-center">
+                      <span>Ordenar Por :</span>
+                      <select v-model="selectedSort">
+                        <option
+                          v-for="option in sortOptions"
+                          :value="option.value"
+                        >
+                          {{option.name}}
+                        </option>
+                      </select>
+                    </div>
+                    <div class="short-by f-left text-center">
+                      <span>Mostrar:</span>
+                      <select v-model="pageSize">
+                        <option
+                          v-for="size in pageSizeOptions"
+                          :value="size.value"
+                        >
+                          {{size.name}}
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="tab-content">
+                    <div
+                      id="grid-view"
+                      class="tab-pane active show"
+                      role="tabpanel"
+                    >
+                      <div class="row">
+                        <div
+                          class="col-lg-4 col-md-6"
+                          v-for="product in displayProducts"
+                          :key="product.id"
+                        >
+                          <div class="product-item">
+                            <div class="product-img">
+                              <a
+                                href="javascript:;"
+                                @click="goToProduct(product.id)"
+                              >
+                                <img
+                                  :src="product.images[0]"
+                                  :alt="product.name"
+                                />
+                              </a>
+                            </div>
+                            <div class="product-info">
+                              <h3 class="product-title">
+                                <a
+                                  href="javascript:;"
+                                  @click="goToProduct(product.id)"
+                                  >{{product.name}}
+                                  <br />
+                                  {{product.nameDescription}}</a
+                                >
+                              </h3>
+                              <h6 class="pro-name">
+                                Producto #{{product.nameId}}
+                              </h6>
+                              <div class="pro-details">
+                                <a
+                                  href="javascript:;"
+                                  @click="goToProduct(product.id)"
+                                >
+                                  <h6>Detalles</h6>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="list-view" class="tab-pane" role="tabpanel">
+                      <div class="row">
+                        <div
+                          class="col-lg-12"
+                          v-for="product in displayProducts"
+                        >
+                          <div class="shop-list product-item">
+                            <div class="product-img">
+                              <a
+                                href="javascript:;"
+                                @click="goToProduct(product.id)"
+                              >
+                                <img
+                                  style="height: 300px; width: 270px"
+                                  :src="product.images[0]"
+                                  alt=""
+                                />
+                              </a>
+                            </div>
+                            <div class="product-info">
+                              <div class="clearfix">
+                                <h6 class="product-title f-left">
+                                  <a
+                                    href="javascript:;"
+                                    @click="goToProduct(product.id)"
+                                    >{{product.name}}</a
+                                  >
+                                </h6>
+                              </div>
+                              <h6 class="brand-name mb-30">
+                                {{product.nameDescription}}
+                              </h6>
+                              <div class="single-pro-color-rating clearfix">
+                                <div
+                                  class="sin-pro-color d-flex align-items-center"
+                                >
+                                  <p class="color-title f-left">Ver Manual</p>
+                                  <div class="sin-pro-action f-left">
+                                    <ul class="action-button ms-3">
+                                      <li>
+                                        <a
+                                          :href="'./files/' + product.namePDF"
+                                          target="_blank"
+                                          ><i class="zmdi zmdi-eye"></i
+                                        ></a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <p class="color-title f-left ms-5">
+                                    Descargar Manual
+                                  </p>
+                                  <div class="sin-pro-action f-left">
+                                    <ul class="action-button ms-5">
+                                      <li>
+                                        <a
+                                          :href="'./files/' + product.namePDF"
+                                          download
+                                          ><i class="zmdi zmdi-download"></i
+                                        ></a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="pro-details">
+                                <a
+                                  href="javascript:;"
+                                  @click="goToProduct(product.id)"
+                                >
+                                  <h6>Detalles</h6>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <ul
+                    class="shop-pagination box-shadow text-center ptblr-10-30"
+                  >
+                    <li v-if="currentPage > 1" @click="currentPage--">
+                      <a href="#"><i class="zmdi zmdi-chevron-left"></i></a>
+                    </li>
+                    <span style="margin-left: 10px; margin-right: 10px"
+                      >Página {{ currentPage }} de {{ pageCount }}</span
+                    >
+                    <li v-if="currentPage < pageCount" @click="currentPage++">
+                      <a href="#"><i class="zmdi zmdi-chevron-right"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-3 order-lg-1 order-2">
+                <aside class="widget-search mb-30">
+                  <form action="#">
+                    <input
+                      class="inputText"
+                      type="text"
+                      placeholder="Buscar"
+                      v-model="searchQuery"
+                    />
+                    <button type="submit">
+                      <i class="zmdi zmdi-search"></i>
+                    </button>
+                  </form>
+                </aside>
+                <aside
+                  class="widget widget-categories box-shadow mb-30"
+                  v-if="filterDiv"
+                >
+                  <h6 class="widget-title border-left mb-20">Filtro</h6>
+                  <div id="cat-treeview" class="product-cat">
+                    <ul>
+                      <li style="display: inline">{{filter}}</li>
+                      <i
+                        style="float: right"
+                        class="zmdi zmdi-close deleteFilter"
+                        @click="deleteFilter"
+                      ></i>
+                    </ul>
+                  </div>
+                </aside>
+                <aside
+                  class="widget widget-categories box-shadow mb-30"
+                  v-if="categoriesDiv"
+                >
+                  <h6 class="widget-title border-left mb-20">Categorías</h6>
+                  <div id="cat-treeview" class="product-cat">
+                    <ul>
+                      <li v-for="category in categories" :value="category">
+                        <a
+                          href="javascript:;"
+                          @click="filterCategory(category.categoryName)"
+                          >{{category.categoryName}}</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="footer-info">
+                <h3>ESA</h3>
+                <p class="pb-3">
+                  <em
+                    >Qui repudiandae et eum dolores alias sed ea. Qui suscipit
+                    veniam excepturi quod.</em
+                  >
+                </p>
+                <p>
+                  Lorem <br />
+                  Lorem<br /><br />
+                  <strong>Teléfono:</strong>Lorem<br />
+                  <strong>Correo:</strong> info@ejemplo.com<br />
+                </p>
+                <div class="social-links mt-3">
+                  <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                  <a href="#" class="facebook"
+                    ><i class="bx bxl-facebook"></i
+                  ></a>
+                  <a href="#" class="instagram"
+                    ><i class="bx bxl-instagram"></i
+                  ></a>
+                  <a href="#" class="google-plus"
+                    ><i class="bx bxl-skype"></i
+                  ></a>
+                  <a href="#" class="linkedin"
+                    ><i class="bx bxl-linkedin"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 footer-links">
+              <h4>Enlaces</h4>
+              <ul>
+                <li>
+                  <i class="bx bx-chevron-right"></i> <a href="#hero">Inicio</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="index.html#about">Acerca De</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="index.html#products">Productos</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="index.html#team">Equipo</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="index.html#faq">FAQ</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-2 col-md-6 footer-links">
+              <h4>Productos</h4>
+              <ul>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#">Cargadores EV</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#">Diagnóstico y Carga</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#">Sistema de almacenaje de herramientas</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#">Sensores TPMS</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#">Herramienta Especial</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#">Clima Automotriz</a>
+                </li>
+                <li>
+                  <i class="bx bx-chevron-right"></i>
+                  <a href="#">Equipo de Elevación</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-6 footer-newsletter">
+              <h4>Nuestro Boletín</h4>
+              <p>
+                Tamen quem nulla quae legam multos aute sint culpa legam noster
+                magna
+              </p>
+              <form action="" method="post">
+                <input type="email" name="email" /><input
+                  type="submit"
+                  value="Suscríbete"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="container">
+          <div class="copyright">
+            &copy; Copyright <strong><span>Squadfree</span></strong
+            >. All Rights Reserved
+          </div>
+        </div> -->
+    </footer>
+    <!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- jquery latest version -->
+    <script src="vendors/js/jquery-3.6.0.min.js"></script>
+    <!-- <script src="vendors/js/jquery-migrate-3.3.2.min.js"></script> -->
+
+    <!-- Bootstrap framework js -->
+    <script src="vendors/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jquery.nivo.slider js -->
+    <script src="vendors/js/jquery.nivo.slider.js"></script>
+
+    <!-- All js plugins included in this file. -->
+    <script src="js/plugins.js"></script>
+
+    <!-- Main js file that contents all jQuery plugins activation. -->
+    <script src="js/main.js"></script>
+
+    <script src="js/vue.global.js"></script>
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
