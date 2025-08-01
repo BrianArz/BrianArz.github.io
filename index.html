@@ -1,1108 +1,324 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<!doctype html>
+<html lang="es">
 
-    <title>Dewi Bootstrap Template - Index</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pick and Run</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+</head>
 
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+<body>
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet"
-    />
+<!-- Navbar -->
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container">
 
-    <!-- Vendor CSS Files -->
-    <link href="vendors/css/aos.css" rel="stylesheet" />
-    <link href="vendors/css/bootstrap.min.css" rel="stylesheet" />
-    <link
-      href="vendors/css/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="vendors/css/boxicons/css/boxicons.min.css" rel="stylesheet" />
-    <link href="vendors/css/glightbox/glightbox.min.css" rel="stylesheet" />
-    <link href="vendors/css/remixicon/remixicon.css" rel="stylesheet" />
-    <link href="vendors/css/swiper-bundle.min.css" rel="stylesheet" />
+    <!-- Brand name -->
+    <a id="navbar-brand" class="navbar-brand text-font-pick-primary" href="#">Pick and Run</a>
 
-    <!-- Template Main CSS File -->
-    <link href="css/index.css" rel="stylesheet" />
+    <!-- Mobile menu toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <!-- =======================================================
-  * Template Name: Dewi
-  * Updated: May 30 2023 with Bootstrap v5.3.0
-  * Template URL: https://bootstrapmade.com/dewi-free-multi-purpose-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-  </head>
+    <!-- Menu -->
+    <div class="collapse navbar-collapse mb-3 mb-lg-0" id="nav-menu">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-uppercase">
+        <li class="nav-item"><a class="nav-link" href="#hero-section">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#features-section">¿Quiénes Somos?</a></li>
+        <li class="nav-item"><a class="nav-link" href="#information-section">¿Por qué Nosotros?</a></li>
+        <li class="nav-item"><a class="nav-link" href="#app-section">App</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact-section">Contacto</a></li>
+      </ul>
 
-  <body>
-    <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top">
-      <div class="container d-flex align-items-center justify-content-between">
-        <h1 class="logo"><a href="index.html">ESA</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <!-- Socials -->
+      <a class="d-lg-none d-xxl-block text-decoration-none" href="https://www.facebook.com/pickandrun2024"
+         target="_blank">
+        <i class="bi bi-facebook fs-5 text-orange me-3"></i>
+      </a>
+      <a class="d-lg-none d-xxl-block text-decoration-none" href="https://www.instagram.com/pickandrun1/"
+         target="_blank">
+        <i class="bi bi-instagram fs-5 text-orange me-3"></i>
+      </a>
 
-        <nav id="navbar" class="navbar">
-          <ul>
-            <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
-            <li><a class="nav-link scrollto" href="#about">Acerca De</a></li>
-            <li><a class="nav-link scrollto" href="#products">Productos</a></li>
-            <li><a class="nav-link scrollto" href="#testimonials">Testimonios</a></li>
-            <li><a class="nav-link scrollto" href="#team">Equipo</a></li>
-            <li><a class="nav-link scrollto" href="catalog.html#page-content">Catálogo</a></li>
-            <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li> -->
-            <li>
-              <a class="getstarted scrollto" href="#contact">Contáctanos</a>
-            </li>
-          </ul>
-          <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav>
-        <!-- .navbar -->
-      </div>
-    </header>
-    <!-- End Header -->
+      <!-- Download app -->
+      <a class="d-lg-none d-xl-block btn btn-orange text-white rounded-pill px-4 text-uppercase fw-bold"
+         href="https://taplink.cc/pickandrun.com.mx" target="_blank">Descargar App</a>
+    </div>
+  </div>
+</nav>
 
-    <!-- ======= Hero Section ======= -->
-    <section id="hero">
-      <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
-        <h1>Slogan ESA</h1>
-        <h2>Breve descripción ESA</h2>
-        <div class="d-flex">
-          <a href="#about" class="btn-get-started scrollto">Conócenos</a>
-          <a
-            href="https://www.youtube.com/watch?v=6_2_b36-reo"
-            class="glightbox-hero btn-watch-video"
-            ><i class="bi bi-play-circle"></i><span>Sugerencia Video</span></a
-          >
+<!-- Hero -->
+<section id="hero-section" class="hero-section text-white position-relative d-flex align-items-center">
+
+  <!-- Overlay -->
+  <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+  <!-- Content -->
+  <div class="container position-relative py-5">
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-6 text-center text-lg-start">
+
+        <!-- Badge -->
+        <span class="badge bg-white text-orange mb-3">Servicio Premium</span>
+
+        <!-- Title -->
+        <h1 class="display-4 fw-bold mb-3 text-font-pick-primary">Delivery a Domicilio</h1>
+
+        <!-- Text -->
+        <p class="lead mb-4">
+          Llega a tus clientes con envíos rápidos, seguros y al mejor precio.
+          Gestiona tus pedidos desde nuestra app en segundos.
+        </p>
+
+        <!-- Know more button -->
+        <div class="d-flex justify-content-center justify-content-lg-start gap-3">
+          <a href="#" class="btn btn-outline-light btn-lg rounded-pill px-4 fw-bold">Conoce Más</a>
         </div>
       </div>
-    </section>
-    <!-- End Hero -->
+    </div>
+  </div>
 
-    <main id="main">
-      <!-- ======= About Us Section ======= -->
-      <section id="about" class="about">
-        <div class="container">
-          <div class="section-title" data-aos="fade-up">
-            <h2>Acerca De</h2>
-            <p>Equipos y Suplementos Automotrices</p>
-          </div>
+  <!-- Wave -->
+  <div id="hero-lower-wave" class="wave position-absolute w-100">
+    <img src="images/peach-wave.png" alt="wave">
+  </div>
+</section>
 
-          <div class="row">
-            <div class="col-lg-6" data-aos="fade-right">
-              <div class="image">
-                <img src="img/webpage/aboutImg.jpg" class="img-fluid" alt="" />
-              </div>
-            </div>
-            <div class="col-lg-6" data-aos="fade-left">
-              <div class="content pt-4 pt-lg-0 pl-0 pl-lg-3">
-                <h3>Título de la Historia</h3>
-                <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-                <ul>
-                  <li>
-                    <i class="bx bx-check-double"></i> Característica Escencial
-                    1
-                  </li>
-                  <li>
-                    <i class="bx bx-check-double"></i> Característica Escencial
-                    2
-                  </li>
-                  <li>
-                    <i class="bx bx-check-double"></i> Característica Escencial
-                    3
-                  </li>
-                </ul>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-                  aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                  occaecat cupidatat non proident, sunt in culpa qui officia
-                  deserunt mollit anim id est laborum
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End About Us Section -->
+<!-- Features -->
+<section id="features-section" class="position-relative py-5 bg-peach">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
 
-      <!-- ======= About Boxes Section ======= -->
-      <section id="about-boxes" class="about-boxes">
-        <div class="container" data-aos="fade-up">
-          <div class="row">
-            <div
-              class="col-lg-4 col-md-6 d-flex align-items-stretch"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="card">
-                <img
-                  src="img/webpage/aboutBox/aboutBoxMissionImg.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-icon">
-                  <i class="ri-draft-line"></i>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title"><a href="">Misión</a></h5>
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod
-                    tempor ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-md-6 d-flex align-items-stretch"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="card">
-                <img
-                  src="img/webpage/aboutBox/aboutBoxPlanImg.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-icon">
-                  <i class="ri-bar-chart-box-line"></i>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title"><a href="">Plan</a></h5>
-                  <p class="card-text">
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem doloremque laudantium, totam rem aperiam, eaque
-                    ipsa quae ab illo inventore veritatis et quasi architecto
-                    beatae vitae dicta sunt explicabo.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              class="col-lg-4 col-md-6 d-flex align-items-stretch"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="card">
-                <img
-                  src="img/webpage/aboutBox/aboutBoxVisionImg.jpg"
-                  class="card-img-top"
-                  alt="..."
-                />
-                <div class="card-icon">
-                  <i class="ri-vip-crown-line"></i>
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title"><a href="">Visión</a></h5>
-                  <p class="card-text">
-                    Nemo enim ipsam voluptatem quia voluptas sit aut odit aut
-                    fugit, sed quia magni dolores eos qui ratione voluptatem
-                    sequi nesciunt Neque porro quisquam est, qui dolorem ipsum
-                    quia dolor sit amet.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End About Boxes Section -->
-
-      <!-- ======= Features Section ======= -->
-      <section id="features" class="features">
-        <div class="container" data-aos="fade-up">
-          <ul class="nav nav-tabs row d-flex">
-            <li class="nav-item col-6">
-              <a
-                class="nav-link active show"
-                data-bs-toggle="tab"
-                href="#tab-1"
-              >
-                <i class="ri-price-tag-3-line"></i>
-                <h4 class="d-none d-lg-block">Ventas</h4>
-              </a>
-            </li>
-            <li class="nav-item col-6">
-              <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
-                <i class="ri-customer-service-2-line"></i>
-                <h4 class="d-none d-lg-block">Servicio Post-Venta</h4>
-              </a>
-            </li>
-          </ul>
-
-          <div class="tab-content">
-            <div class="tab-pane active show" id="tab-1">
-              <div class="row">
-                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                  <h3>
-                    En la imagen de la derecha va el logo de cada empresa.
-                  </h3>
-                  <p class="fst-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <ul>
-                    <li>
-                      <i class="ri-check-double-line"></i> Ullamco laboris nisi
-                      ut aliquip ex ea commodo consequat.
-                    </li>
-                    <li>
-                      <i class="ri-check-double-line"></i> Duis aute irure dolor
-                      in reprehenderit in voluptate velit.
-                    </li>
-                    <li>
-                      <i class="ri-check-double-line"></i> Ullamco laboris nisi
-                      ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                      in reprehenderit in voluptate trideta storacalaperda
-                      mastiro dolore eu fugiat nulla pariatur.
-                    </li>
-                  </ul>
-                  <p>
-                    Ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum
-                  </p>
-                </div>
-                <div class="col-lg-6 order-1 order-lg-2 text-center">
-                  <img
-                    src="img/webpage/features/featuresSalesImg.jpg"
-                    alt=""
-                    class="img-fluid"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane" id="tab-2">
-              <div class="row">
-                <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                  <h3>
-                    En la imagen de la derecha va el logo de cada empresa.
-                  </h3>
-                  <p>
-                    Ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum
-                  </p>
-                  <p class="fst-italic">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
-                  </p>
-                  <ul>
-                    <li>
-                      <i class="ri-check-double-line"></i> Ullamco laboris nisi
-                      ut aliquip ex ea commodo consequat.
-                    </li>
-                    <li>
-                      <i class="ri-check-double-line"></i> Duis aute irure dolor
-                      in reprehenderit in voluptate velit.
-                    </li>
-                    <li>
-                      <i class="ri-check-double-line"></i> Provident mollitia
-                      neque rerum asperiores dolores quos qui a. Ipsum neque
-                      dolor voluptate nisi sed.
-                    </li>
-                    <li>
-                      <i class="ri-check-double-line"></i> Ullamco laboris nisi
-                      ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                      in reprehenderit in voluptate trideta storacalaperda
-                      mastiro dolore eu fugiat nulla pariatur.
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-6 order-1 order-lg-2 text-center">
-                  <img
-                    src="img/webpage/features/featuresCustomServiceImg.jpg"
-                    alt=""
-                    class="img-fluid"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Features Section -->
-
-      <!-- ======= Products Section ======= -->
-      <section id="products" class="products section-bg">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Productos</h2>
-            <p>Dales un vistazo!</p>
-          </div>
-
-          <div class="row" data-aos="fade-up" data-aos-delay="200">
-            <div class="col-md-6">
-              <div class="icon-box">
-                <i class="bi bi-ev-station-fill"></i>
-                <h4><a href="#">Cargadores EV</a></h4>
-                <p>
-                  Voluptatum deleniti atque corrupti quos dolores et quas
-                  molestias excepturi sint occaecati cupiditate non provident
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6 mt-4 mt-md-0">
-              <div class="icon-box">
-                <i class="bi bi-lightning-charge-fill"></i>
-                <h4><a href="#">Diagnóstico y Carga</a></h4>
-                <p>
-                  Minim veniam, quis nostrud exercitation ullamco laboris nisi
-                  ut aliquip ex ea commodo consequat tarad limino ata
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6 mt-4 mt-md-0">
-              <div class="icon-box">
-                <i class="bi bi-tools"></i>
-                <h4><a href="#">Sistema de almacenaje y herramientas</a></h4>
-                <p>
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6 mt-4 mt-md-0">
-              <div class="icon-box">
-                <i class="bi bi-exclamation-diamond"></i>
-                <h4><a href="#">Tensores TPMS</a></h4>
-                <p>
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                  qui officia deserunt mollit anim id est laborum
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6 mt-4 mt-md-0">
-              <div class="icon-box">
-                <i class="bi bi-gear"></i>
-                <h4><a href="#">Herramienta Especial</a></h4>
-                <p>
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                  blanditiis praesentium voluptatum deleniti atque
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6 mt-4 mt-md-0">
-              <div class="icon-box">
-                <i class="bi bi-car-front-fill"></i>
-                <h4><a href="#">Equipo de Elevación</a></h4>
-                <p>
-                  Et harum quidem rerum facilis est et expedita distinctio. Nam
-                  libero tempore, cum soluta nobis est eligendi
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6 mt-4 mt-md-0">
-              <div class="icon-box">
-                <i class="bi bi-fan"></i>
-                <h4><a href="#">Clima Automotriz</a></h4>
-                <p>
-                  Et harum quidem rerum facilis est et expedita distinctio. Nam
-                  libero tempore, cum soluta nobis est eligendi
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Services Section -->
-
-      <!-- ======= Brands Section ======= -->
-      <section id="brands" class="brands">
-        <div class="container" data-aos="zoom-in">
-          <div class="row">
-            <div
-              class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-            >
-              <img
-                src="img/webpage/brands/client-1.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-
-            <div
-              class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-            >
-              <img
-                src="img/webpage/brands/client-2.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-
-            <div
-              class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-            >
-              <img
-                src="img/webpage/brands/client-3.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-
-            <div
-              class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-            >
-              <img
-                src="img/webpage/brands/client-4.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-
-            <div
-              class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-            >
-              <img
-                src="img/webpage/brands/client-5.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-
-            <div
-              class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center"
-            >
-              <img
-                src="img/webpage/brands/client-6.png"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Brands Section -->
-
-      <!-- ======= Testimonials Section ======= -->
-      <section id="testimonials" class="testimonials section-bg">
-        <div class="container">
-          <div class="section-title" data-aos="fade-in" data-aos-delay="100">
-            <h2>Testimonios</h2>
-            <p>Opiniones recibidas</p>
-          </div>
-
-          <div
-            class="testimonials-slider swiper"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Proin iaculis purus consequat sem cure digni ssim donec
-                    porttitora entum suscipit rhoncus. Accusantium quam,
-                    ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                    risus at semper.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                  <img
-                    src="img/webpage/testimonials/testimonials-1.jpg"
-                    class="testimonial-img"
-                    alt=""
-                  />
-                  <h3>Compañía 1</h3>
-                  <h4>Lorem</h4>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Export tempor illum tamen malis malis eram quae irure esse
-                    labore quem cillum quid cillum eram malis quorum velit fore
-                    eram velit sunt aliqua noster fugiat irure amet legam anim
-                    culpa.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                  <img
-                    src="img/webpage/testimonials/testimonials-2.jpg"
-                    class="testimonial-img"
-                    alt=""
-                  />
-                  <h3>Persona 2</h3>
-                  <h4>Lorem</h4>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Enim nisi quem export duis labore cillum quae magna enim
-                    sint quorum nulla quem veniam duis minim tempor labore quem
-                    eram duis noster aute amet eram fore quis sint minim.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                  <img
-                    src="img/webpage/testimonials/testimonials-3.jpg"
-                    class="testimonial-img"
-                    alt=""
-                  />
-                  <h3>Compañia 2</h3>
-                  <h4>Lorem</h4>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa
-                    multos export minim fugiat minim velit minim dolor enim duis
-                    veniam ipsum anim magna sunt elit fore quem dolore labore
-                    illum veniam.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                  <img
-                    src="img/webpage/testimonials/testimonials-4.jpg"
-                    class="testimonial-img"
-                    alt=""
-                  />
-                  <h3>Persona 2</h3>
-                  <h4>Lorem</h4>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                    Quis quorum aliqua sint quem legam fore sunt eram irure
-                    aliqua veniam tempor noster veniam enim culpa labore duis
-                    sunt culpa nulla illum cillum fugiat legam esse veniam culpa
-                    fore nisi cillum quid.
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                  </p>
-                  <img
-                    src="img/webpage/testimonials/testimonials-5.jpg"
-                    class="testimonial-img"
-                    alt=""
-                  />
-                  <h3>Compañía 3</h3>
-                  <h4>Lorem</h4>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-      <!-- End Testimonials Section -->
-
-      <!-- ======= Team Section ======= -->
-      <section id="team" class="team section-bg">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Equipo</h2>
-            <p>Conócenos</p>
-          </div>
-
-          <div class="row">
-            <div class="col-lg-4 col-md-6">
-              <div class="member" data-aos="fade-up" data-aos-delay="100">
-                <div class="pic">
-                  <img
-                    src="img/webpage/team/team-1.jpg"
-                    class="img-fluid"
-                    alt=""
-                  />
-                </div>
-                <div class="member-info">
-                  <h4>Persona 1</h4>
-                  <span>CEO</span>
-                  <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="member">
-                <div class="pic">
-                  <img
-                    src="img/webpage/team/team-2.jpg"
-                    class="img-fluid"
-                    alt=""
-                  />
-                </div>
-                <div class="member-info">
-                  <h4>Persona 2</h4>
-                  <span>Ventas</span>
-                  <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="member">
-                <div class="pic">
-                  <img
-                    src="img/webpage/team/team-3.jpg"
-                    class="img-fluid"
-                    alt=""
-                  />
-                </div>
-                <div class="member-info">
-                  <h4>Persona 3</h4>
-                  <span>Soporte</span>
-                  <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Team Section -->
-
-      <!-- ======= Frequently Asked Questions Section ======= -->
-      <section id="faq" class="faq">
-        <div class="container">
-          <div class="section-title" data-aos="fade-up">
-            <h2>Preguntas Frecuentes</h2>
-            <p>Resuelve tus dudas</p>
-          </div>
-
-          <ul class="faq-list">
-            <li data-aos="fade-up">
-              <a
-                data-bs-toggle="collapse"
-                class="collapsed"
-                data-bs-target="#faq1"
-                >Non consectetur a erat nam at lectus urna duis?
-                <i class="bx bx-chevron-down icon-show"></i
-                ><i class="bx bx-x icon-close"></i
-              ></a>
-              <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id
-                  volutpat lacus laoreet non curabitur gravida. Venenatis lectus
-                  magna fringilla urna porttitor rhoncus dolor purus non.
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="100">
-              <a
-                data-bs-toggle="collapse"
-                data-bs-target="#faq2"
-                class="collapsed"
-                >Feugiat scelerisque varius morbi enim nunc faucibus a
-                pellentesque? <i class="bx bx-chevron-down icon-show"></i
-                ><i class="bx bx-x icon-close"></i
-              ></a>
-              <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Dolor sit amet consectetur adipiscing elit pellentesque
-                  habitant morbi. Id interdum velit laoreet id donec ultrices.
-                  Fringilla phasellus faucibus scelerisque eleifend donec
-                  pretium. Est pellentesque elit ullamcorper dignissim. Mauris
-                  ultrices eros in cursus turpis massa tincidunt dui.
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="200">
-              <a
-                data-bs-toggle="collapse"
-                data-bs-target="#faq3"
-                class="collapsed"
-                >Dolor sit amet consectetur adipiscing elit pellentesque
-                habitant morbi? <i class="bx bx-chevron-down icon-show"></i
-                ><i class="bx bx-x icon-close"></i
-              ></a>
-              <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Eleifend mi in nulla posuere sollicitudin aliquam ultrices
-                  sagittis orci. Faucibus pulvinar elementum integer enim. Sem
-                  nulla pharetra diam sit amet nisl suscipit. Rutrum tellus
-                  pellentesque eu tincidunt. Lectus urna duis convallis
-                  convallis tellus. Urna molestie at elementum eu facilisis sed
-                  odio morbi quis
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="300">
-              <a
-                data-bs-toggle="collapse"
-                data-bs-target="#faq4"
-                class="collapsed"
-                >Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
-                <i class="bx bx-chevron-down icon-show"></i
-                ><i class="bx bx-x icon-close"></i
-              ></a>
-              <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Dolor sit amet consectetur adipiscing elit pellentesque
-                  habitant morbi. Id interdum velit laoreet id donec ultrices.
-                  Fringilla phasellus faucibus scelerisque eleifend donec
-                  pretium. Est pellentesque elit ullamcorper dignissim. Mauris
-                  ultrices eros in cursus turpis massa tincidunt dui.
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="400">
-              <a
-                data-bs-toggle="collapse"
-                data-bs-target="#faq5"
-                class="collapsed"
-                >Tempus quam pellentesque nec nam aliquam sem et tortor
-                consequat? <i class="bx bx-chevron-down icon-show"></i
-                ><i class="bx bx-x icon-close"></i
-              ></a>
-              <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Molestie a iaculis at erat pellentesque adipiscing commodo.
-                  Dignissim suspendisse in est ante in. Nunc vel risus commodo
-                  viverra maecenas accumsan. Sit amet nisl suscipit adipiscing
-                  bibendum est. Purus gravida quis blandit turpis cursus in
-                </p>
-              </div>
-            </li>
-
-            <li data-aos="fade-up" data-aos-delay="500">
-              <a
-                data-bs-toggle="collapse"
-                data-bs-target="#faq6"
-                class="collapsed"
-                >Tortor vitae purus faucibus ornare. Varius vel pharetra vel
-                turpis nunc eget lorem dolor?
-                <i class="bx bx-chevron-down icon-show"></i
-                ><i class="bx bx-x icon-close"></i
-              ></a>
-              <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-                <p>
-                  Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris
-                  vitae ultricies leo integer malesuada nunc vel. Tincidunt eget
-                  nullam non nisi est sit amet. Turpis nunc eget lorem dolor
-                  sed. Ut venenatis tellus in metus vulputate eu scelerisque.
-                  Pellentesque diam volutpat commodo sed egestas egestas
-                  fringilla phasellus faucibus. Nibh tellus molestie nunc non
-                  blandit massa enim nec.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!-- End Frequently Asked Questions Section -->
-
-      <!-- ======= Contact Section ======= -->
-      <section id="contact" class="contact section-bg">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Contacto</h2>
-            <p>Acércate a Nosotros</p>
-          </div>
-
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="info-box mb-4">
-                <i class="bx bx-map"></i>
-                <h3>Dirección</h3>
-                <p>Lorem</p>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-              <div class="info-box mb-4">
-                <i class="bx bx-envelope"></i>
-                <h3>Correo</h3>
-                <p>contact@ejemplo.com</p>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-              <div class="info-box mb-4">
-                <i class="bx bx-phone-call"></i>
-                <h3>Teléfono</h3>
-                <p>Lorem</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-lg-6">
-              <iframe
-                class="mb-4 mb-lg-0"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d964188.4148380101!2d-99.28061977534804!3d19.266661389674752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc59e91a3042f%3A0x1d51ae0f0cac2d7e!2sEQUIPOS%20Y%20SUPLEMENTOS%20AUTOMOTRICES!5e0!3m2!1sen!2smx!4v1682751146530!5m2!1sen!2smx"
-                frameborder="0"
-                style="border: 0; width: 100%; height: 384px"
-                allowfullscreen
-              ></iframe>
-            </div>
-
-            <div class="col-lg-6">
-              <form
-                action="forms/contact.php"
-                method="post"
-                role="form"
-                class="php-email-form"
-              >
-                <div class="row">
-                  <div class="col-md-6 form-group">
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      id="name"
-                      placeholder="Tu Nombre"
-                      required
-                    />
-                  </div>
-                  <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      id="email"
-                      placeholder="Tu Correo"
-                      required
-                    />
-                  </div>
-                </div>
-                <div class="form-group mt-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="subject"
-                    id="subject"
-                    placeholder="Asunto"
-                    required
-                  />
-                </div>
-                <div class="form-group mt-3">
-                  <textarea
-                    class="form-control"
-                    name="message"
-                    rows="5"
-                    placeholder="Mensaje"
-                    required
-                  ></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Cargando</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">
-                    Tu mensaje ha sido enviado. Gracias!
-                  </div>
-                </div>
-                <div class="text-center">
-                  <button type="submit">Enviar Mensaje</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- End Contact Section -->
-    </main>
-    <!-- End #main -->
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4 col-md-6">
-              <div class="footer-info">
-                <h3>ESA</h3>
-                <p class="pb-3">
-                  <em
-                    >Qui repudiandae et eum dolores alias sed ea. Qui suscipit
-                    veniam excepturi quod.</em
-                  >
-                </p>
-                <p>
-                  Lorem <br />
-                  Lorem<br /><br />
-                  <strong>Teléfono:</strong>Lorem<br />
-                  <strong>Correo:</strong> info@ejemplo.com<br />
-                </p>
-                <div class="social-links mt-3">
-                  <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                  <a href="#" class="facebook"
-                    ><i class="bx bxl-facebook"></i
-                  ></a>
-                  <a href="#" class="instagram"
-                    ><i class="bx bxl-instagram"></i
-                  ></a>
-                  <a href="#" class="google-plus"
-                    ><i class="bx bxl-skype"></i
-                  ></a>
-                  <a href="#" class="linkedin"
-                    ><i class="bx bxl-linkedin"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-2 col-md-6 footer-links">
-              <h4>Enlaces</h4>
-              <ul>
-                <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#hero">Inicio</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#about">Acerca De</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#products">Productos</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#team">Equipo</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#faq">FAQ</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-lg-2 col-md-6 footer-links">
-              <h4>Productos</h4>
-              <ul>
-                <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#">Cargadores EV</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Diagnóstico y Carga</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Sistema de almacenaje de herramientas</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#">Sensores TPMS</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Herramienta Especial</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Clima Automotriz</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="#">Equipo de Elevación</a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="col-lg-4 col-md-6 footer-newsletter">
-              <h4>Nuestro Boletín</h4>
-              <p>
-                Tamen quem nulla quae legam multos aute sint culpa legam noster
-                magna
-              </p>
-              <form action="" method="post">
-                <input type="email" name="email" /><input
-                  type="submit"
-                  value="Suscríbete"
-                />
-              </form>
-            </div>
-          </div>
+      <!-- Delivery -->
+      <div id="feature-one" class="col-12 col-sm-12 col-md-6 col-xl-3 position-relative">
+        <div class="card h-100 text-center border-0 p-5">
+          <img src="images/feature-delivery.png" class="mx-auto mb-3" alt="feature-delivery">
+          <h6 class="mb-2 text-uppercase text-font-pick-primary fw-bold">Delivery a domicilio</h6>
+          <p class="mb-0">Somos una empresa especializada en entregas a domicilio.</p>
         </div>
       </div>
 
-      <!-- <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Squadfree</span></strong
-          >. All Rights Reserved
+      <!-- Fast -->
+      <div id="feature-two" class="col-12 col-sm-12 col-md-6 col-xl-3 position-relative">
+        <div class="card h-100 text-center border-0 p-5">
+          <img src="images/feature-fast.png" class="mx-auto mb-3" alt="feature-fast">
+          <h6 class="mb-2 text-uppercase text-font-pick-primary fw-bold">Rápido y seguro</h6>
+          <p class="mb-0">Ofrecemos entregas dinámicas de alta calidad y seguridad.</p>
         </div>
-      </div> -->
-    </footer>
-    <!-- End Footer -->
+      </div>
 
-    <div id="preloader"></div>
-    <a
-      href="#"
-      class="back-to-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
+      <!-- Day -->
+      <div id="feature-three" class="col-12 col-sm-12 col-md-6 col-xl-3 position-relative">
+        <div class="card h-100 text-center border-0 p-5">
+          <img src="images/feature-day.png" class="mx-auto mb-3" alt="feature-day">
+          <h6 class="mb-2 text-uppercase text-font-pick-primary fw-bold">Mismo día + día siguiente</h6>
+          <p class="mb-0">Haz que tu negocio crezca con nuestras modalidades de entrega.</p>
+        </div>
+      </div>
 
-    <!-- Vendor JS Files -->
-    <script src="vendors/js/purecounter/purecounter_vanilla.js"></script>
-    <script src="vendors/js/aos.js"></script>
-    <script src="vendors/js/bootstrap.bundle.min.js"></script>
-    <script src="vendors/js/glightbox/glightbox.min.js"></script>
-    <script src="vendors/js/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="vendors/js/swiper-bundle.min.js"></script>
-    <script src="vendors/php-email-form/validate.js"></script>
+      <!-- Specialization -->
+      <div id="feature-four" class="col-12 col-sm-12 col-md-6 col-xl-3 position-relative">
+        <div class="card h-100 text-center border-0 p-5">
+          <img src="images/feature-specialization.png" class="mx-auto mb-3" alt="feature-specialization">
+          <h6 class="mb-2 text-uppercase text-font-pick-primary fw-bold">Especialización</h6>
+          <p class="mb-0">Modalidades de entrega adaptadas a tus necesidades.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Template Main JS File -->
-    <script src="js/index.js"></script>
-  </body>
+<!-- Information -->
+<section id="information-section" class="position-relative">
+
+  <!-- Wave -->
+  <div id="information-upper-wave" class="wave position-absolute w-100">
+    <img src="images/peach-wave.png" alt="wave">
+  </div>
+
+  <div class="row h-100 g-0">
+
+    <!-- Empty space helper -->
+    <div class="col-lg-5"></div>
+
+    <!-- Orange content -->
+    <div class="col-lg-7 bg-orange d-flex flex-column justify-content-center p-5 h-100">
+
+      <div class="row g-0">
+        <div class="col-12 col-sm-11 col-md-8 col-lg-6 py-5">
+
+          <!-- Title decorator -->
+          <small class="text-uppercase text-font-pick-primary">Pick and Run</small>
+
+          <!-- Title -->
+          <h2 class="display-5 my-3 fw-semibold text-white text-font-pick-primary">Haz que tu negocio crezca con
+            entregas <span
+                    class="text-black">rápidas</span> y <span>eficientes</span>.</h2>
+
+          <!-- More info button -->
+          <a href="https://api.whatsapp.com/send/?phone=5215561544736&text&type=phone_number&app_absent=0"
+             target="_blank" class="btn btn-outline-light btn-lg rounded-pill px-4 mb-4">
+            <i class="bi bi-info-circle me-2"></i>
+            Más Información
+          </a>
+
+          <!-- Information -->
+          <div class="row text-white mt-3">
+
+            <!-- Prices -->
+            <div class="col-6 mb-3">
+              <div class="form-check">
+                <div class="form-check-label d-flex align-items-start">
+                  <i class="bi bi-wallet2 fs-4 me-2 mt-1"></i>
+                  <div>
+                    <strong>Picks desde $116</strong><br>
+                    <small>Ofrecemos precios inigualables.</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Shipments -->
+            <div class="col-6 mb-3">
+              <div class="form-check">
+                <div class="form-check-label d-flex align-items-start">
+                  <i class="bi bi-truck fs-4 me-2 mt-1"></i>
+                  <div>
+                    <strong>Envíos Seguros</strong><br>
+                    <small>Personal altamente calificado y capacitado.</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wave -->
+  <div id="information-lower-wave" class="wave position-absolute w-100">
+    <img src="images/peach-wave.png" alt="wave">
+  </div>
+
+</section>
+
+<!-- Work together -->
+<section class="bg-peach text-center">
+  <div class="container d-flex align-items-center justify-content-center">
+    <h1 class="text-font-pick-primary fw-bold">¡Queremos formar parte de tu emprendimiento!</h1>
+  </div>
+</section>
+
+<!-- App -->
+<section id="app-section" class="position-relative">
+
+  <!-- Wave -->
+  <div id="app-upper-wave" class="wave position-absolute w-100">
+    <img src="images/peach-wave.png" alt="wave" class="w-100">
+  </div>
+
+  <div class="row h-100 g-0">
+
+    <!-- Orange content -->
+    <div class="col-lg-7 bg-orange d-flex flex-column justify-content-center p-5">
+
+      <div class="row g-0 p-5 d-flex align-items-center justify-content-end">
+        <div class="col-12 col-sm-11 col-md-8 col-lg-6 py-5">
+
+          <!-- Title decorator -->
+          <small class="text-uppercase text-font-pick-primary">Descargar</small>
+
+          <!-- Title -->
+          <h2 class="display-6 my-3 fw-semibold text-white text-font-pick-primary">Descarga nuestra app con cientos de
+            beneficios para nuestros clientes.</h2>
+
+          <!-- Download button -->
+          <a href="https://taplink.cc/pickandrun.com.mx" target="_blank"
+             class="btn btn-outline-light btn-lg rounded-pill px-4 mt-3"><i class="bi bi-download me-2"></i>Descargar
+            App</a>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Empty space helper -->
+    <div class="col-lg-5 d-none d-lg-block"></div>
+
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact-section" class="py-5 bg-white">
+  <div class="container">
+
+    <!-- Title -->
+    <div class="text-center mb-5 text-font-pick-primary">
+      <h1 class="text-uppercase fw-bold">CONTACTO</h1>
+      <p>¡Escríbenos! Queremos saber de ti.</p>
+      <p>Tel. +52 55 6154 4736<br>contacto@pickandrun.com.mx</p>
+    </div>
+
+    <!-- Form -->
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="d-none"></label>
+            <input type="text" class="form-control rounded-pill" placeholder="Nombre" id="nombre">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="d-none"></label>
+            <input type="email" class="form-control rounded-pill" placeholder="E-mail" id="email">
+          </div>
+          <div class="mb-3">
+            <label for="asunto" class="d-none"></label>
+            <input type="text" class="form-control rounded-pill" placeholder="Asunto" id="asunto">
+          </div>
+          <div class="mb-3">
+            <label for="mensaje" class="d-none"></label>
+            <textarea class="form-control" rows="5" placeholder="Mensaje" id="mensaje"></textarea>
+          </div>
+          <div class="row mt-4 g-0 d-flex justify-content-center align-items-center">
+            <button type="submit" class="btn btn-orange rounded-pill w-50 fw-bold text-white text-uppercase">Enviar
+              mensaje
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-4 bg-peach">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <ul class="nav mb-3 mb-md-0 fw-bold">
+      <li><a class="nav-link px-2 text-black" href="#hero-section">Inicio</a></li>
+      <li><a class="nav-link px-2 text-black" href="#features-section">¿Quiénes somos?</a></li>
+      <li><a class="nav-link px-2 text-black" href="#information-section">¿Por qué nosotros?</a></li>
+      <li><a class="nav-link px-2 text-black" href="#app-section">App</a></li>
+      <li><a class="nav-link px-2 text-black" href="#contact-section">Contacto</a></li>
+    </ul>
+    <p class="mb-0 text-center text-muted small">
+      &copy; 2024 Pick and Run | Todos los derechos reservados |
+      <a class="text-black fw-bold text-decoration-none" href="privacy-agreement.html">Política de Privacidad</a> |
+      <a class="text-black fw-bold text-decoration-none" href="terms-and-conditions.html">Términos y Condiciones</a>
+    </p>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a href="https://api.whatsapp.com/send/?phone=5215561544736&text&type=phone_number&app_absent=0" target="_blank"
+   class="position-fixed bottom-0 end-0 m-4" style="width:60px;height:60px;">
+  <img src="images/whats.svg" class="img-fluid" alt="WhatsApp">
+</a>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
